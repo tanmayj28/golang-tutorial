@@ -24,6 +24,15 @@ func main() {
 - It has path for where to look for Go code.
 - If the environment variable is unset, GOPATH defaults to a subdirectory named `go` in the user's home directory `$HOME/go` on Unix, `%USERPROFILE%\go` on Windows, unless that directory holds a Go distribution. Run `go env GOPATH` to see the current GOPATH.
 
+### Go Packages:
+- If you want to check out packages, head over to `pkg.go.com`.
+- Let's explore some packages:
+
+#### `buffio` package
+- It is a buffer which can be used to read input from various devices and store them in a buffer.
+
+#### `os` package
+
 ## Lexer and Types:
 A lexer basically keeps check if the grammar / syntax of the language is properly followed or not.
 - This Lexical Analysis happens before compilation.

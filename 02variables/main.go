@@ -33,7 +33,7 @@ func main() {
 	fmt.Println(website) // Lexer does the type setting for us here but it won't allow you to update it's type later.
 
 	// No var style using Walrus Operator
-	// This is only allowed inside methods and not in globa; scopes etc.
+	// This is only allowed inside methods and not in global scopes etc.
 	numberOfUsers := 200
 	fmt.Println(numberOfUsers)
 	fmt.Printf("Variable is of type: %T \n", numberOfUsers)

@@ -6,6 +6,6 @@ package main
 // )
 
 // func main() {
-// 	message := greetings.Hello("Tanmay")
+// 	message, _ := greetings.Hello("Tanmay")
 // 	fmt.Println(message)
 // }
