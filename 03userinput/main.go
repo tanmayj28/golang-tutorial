@@ -21,5 +21,7 @@ func main() {
 	// input, err := reader.ReadString('\n')
 	input, _ := reader.ReadString('\n')
 	fmt.Println("Thanks for rating, ", input)
+
+	// all input seem to be string, this could be issue if we want numbers, boolean etc.
 	fmt.Printf("Type of rating is %T", input)
 }

@@ -17,6 +17,40 @@ func main() {
 - Now we will run the file using: `go run main.go`
   - Note: This will only run the file and won't create any executables.
 
+## ENV agnostic:
+- Go lets you build exe, linux executables, mac executables.
+- Type: `go env`
+  - Notice a var called `GOOS`, this can be `darwin`, `windows`, `linux` etc. and lets you build for diff systems.
+  - Now, if you want to build your application in windows or exe format, just run this (on your mac maybe): `GOOS="windows" go build`
+
+## Memory Management: (malloc & dealloc)
+- In GoLang, memory management happens automatically, so you won't have to worry about it.
+- `new()`:
+  - allocate memory but not INIT.
+  - get a memory address.
+  - zeroed storage. (can't put data initially)
+- `make()`:
+  - allocate memory and INIT.
+  - get a memory address.
+  - non-zeroed storage. (can put data initially)
+
+- GC happens automatically. Out of Scope or nil
+  - It was rewritten after some initial issues.
+  - Package to be used is called `runtime`.
+
+- The `GOGC` variable sets the initial GC target percentage. A collection is triggered when the ratio of freshly allocated data to live data remaining after previous collection reaches this percentage. The default is `GOGC=100`. Setting `GOGC=off` disables the GC entirely. The runtime/debug pcakage's `SetGCPercent()` function allows changing this percentage at run time.
+- There are a lot of functions available too.
+
+## Pointers
+- When you have multiple variables, functions and their invocations. These variables are passed in multiple functions, sometimes a copy of these variables gets passed and this can cause irrefularities if not handled correctly. Pointers help us, in fixing these issues correctly, by passing the actual address of the variable making sure we are dealing with correct values and variables.
+So, a pointer is nothing but a direct reference to the memory address of a variable.
+- Basic syntax would be:
+```
+myNumber := 23
+var ptr *int
+var ptrMyNumber = &myNumber
+```
+
 ## Go Documentation
 - Like every other langauge, Go also has a command line toolchain, and you can read more about commands using: `go help <command>`, `go help run` etc.
 ### `GOPATH`:
@@ -32,6 +66,14 @@ func main() {
 - It is a buffer which can be used to read input from various devices and store them in a buffer.
 
 #### `os` package
+
+#### `time` package:
+- The Time package in golang is a bit tricky, so understanding this via doc is important.
+- In golang, if you want to format time, you need to format it by passing a date example with which you would like to format. And crazy part is, that date is actually a fixed value, `01-02-2006 15:04:05 Monday`.
+- There are many functions in-built like:
+  - sleep
+  - ticker
+  - etc.
 
 ## Lexer and Types:
 A lexer basically keeps check if the grammar / syntax of the language is properly followed or not.
