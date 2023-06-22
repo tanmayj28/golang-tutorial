@@ -58,6 +58,15 @@ Not too much used in GoLang instead we use slices. Refer to the 08myarray exerci
 - Under the hood, these are actually Arrays. We use these more because they are far more powerful in GoLang for getting stuff done.
 - We would be using a lot of slices in GoLang as they have many in-built functions.
 
+## Maps:
+- They are basically Hashes. When you're looping over maps, if you declare `key` as `_` it will be ignored by golang.
+- For examples, checkout `10mymaps/` directory.
+
+## Structs:
+- In Golang we don't have classes, instead we use Structs.
+  - There is no Inheritence in Golang.
+  - No super or parent or child etc.
+
 ## Go Documentation
 - Like every other langauge, Go also has a command line toolchain, and you can read more about commands using: `go help <command>`, `go help run` etc.
 ### `GOPATH`:
