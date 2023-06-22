@@ -51,6 +51,13 @@ var ptr *int
 var ptrMyNumber = &myNumber
 ```
 
+## Arrays:
+Not too much used in GoLang instead we use slices. Refer to the 08myarray exercise for basics.
+
+## Slices:
+- Under the hood, these are actually Arrays. We use these more because they are far more powerful in GoLang for getting stuff done.
+- We would be using a lot of slices in GoLang as they have many in-built functions.
+
 ## Go Documentation
 - Like every other langauge, Go also has a command line toolchain, and you can read more about commands using: `go help <command>`, `go help run` etc.
 ### `GOPATH`:
